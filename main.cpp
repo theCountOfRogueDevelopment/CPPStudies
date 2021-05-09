@@ -56,16 +56,16 @@ int main()
     int c = 5;
     cout << "c = " << c << "\n";
     int* p = &c;// pointer p points at the address REFERENCE of c
-    cout << "p's reference = " << p << "\n";
-    cout << "p's value = " << *p << "\n";
+    cout << "p's reference = " << p << endl;
+    cout << "p's value = " << *p << endl;
     int c2 = *p;//sets new variable c2 to the current VALUE of p
-    cout << "c2 = " << c2 << "\n";
+    cout << "c2 = " << c2 << endl;
 
     //class example
     //constructor to create the class and initialize values
     MyClass m(5, "you suck!");
     //access a class variable
-    cout << m.myString<<"\n";
+    cout << m.myString << endl;
     //access a class method
     cout << m.echo("Check out the big brain on Brad\n");
     //call your Hello World shit, object oriented style
@@ -75,7 +75,7 @@ int main()
     //notice the constructor is slightly different
     MyClass* classPointerExample = new MyClass(5, "sdrawkcab siht daer");
     //access class members and variables
-    cout << classPointerExample->reverse(classPointerExample->myString) << "\n";
+    cout << classPointerExample->reverse(classPointerExample->myString) << endl;
 
 
     //leave this here so you know when the program is done
