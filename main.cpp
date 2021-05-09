@@ -26,6 +26,12 @@ public:             // Access specifier
         myNum = _myNum;
         myString = _myString;
     }
+    
+    //Destructor to free up memory when the object is no longer needed
+    //it will called automatically when object falls out of scope
+    ~MyClass() {
+        cout<< "Destructor was called" << endl;
+    }
 
     void helloWold() {  // Method/function defined inside the class
         cout << "Hello World!\n";
@@ -67,14 +73,15 @@ int main()
     //access a class variable
     cout << m.myString << endl;
     //access a class method
-    cout << m.echo("Check out the big brain on Brad\n");
+    cout << m.echo("Check out the big brain on Brad") << endl;
     //call your Hello World shit, object oriented style
     m.helloWold();
 
     //class pointer
     //notice the constructor is slightly different
     MyClass* classPointerExample = new MyClass(5, "sdrawkcab siht daer");
-    //access class members and variables
+    //access class functions and variables
+    //notice the "->" instead of the "."
     cout << classPointerExample->reverse(classPointerExample->myString) << endl;
 
 
