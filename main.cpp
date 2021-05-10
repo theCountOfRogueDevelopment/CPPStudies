@@ -88,8 +88,10 @@ int main()
     
     //now lets access a class defined elsewhere
     ccTestClass* cctc = new ccTestClass(5);
+    cout << "cctc->getSomeInt() = " << cctc->getSomeInt() << endl;
+    //change it to 7
     cctc->setSomeInt(7);
-    cout << cctc->getSomeInt() << endl;
+    cout << "cctc->getSomeInt() = " << cctc->getSomeInt() << endl;
 
 
     //leave this here so you know when the program is done
