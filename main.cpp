@@ -14,6 +14,8 @@
 
 #include <iostream>
 
+#include "ccTestClass.h"
+
 using namespace std;
 
 //example class
@@ -30,7 +32,7 @@ public:             // Access specifier
     //Destructor to free up memory when the object is no longer needed
     //it will called automatically when object falls out of scope
     ~MyClass() {
-        cout<< "Destructor was called" << endl;
+        cout<< "Destructor of MyClass was called" << endl;
     }
 
     void helloWold() {  // Method/function defined inside the class
@@ -83,6 +85,11 @@ int main()
     //access class functions and variables
     //notice the "->" instead of the "."
     cout << classPointerExample->reverse(classPointerExample->myString) << endl;
+    
+    //now lets access a class defined elsewhere
+    ccTestClass* cctc = new ccTestClass(5);
+    cctc->setSomeInt(7);
+    cout << cctc->getSomeInt() << endl;
 
 
     //leave this here so you know when the program is done
